@@ -20,23 +20,23 @@ var _Footer = require('../components/Footer');
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _Slider = require('../components/Slider');
+var _AproposSlider = require('../components/AproposSlider');
 
-var _Slider2 = _interopRequireDefault(_Slider);
+var _AproposSlider2 = _interopRequireDefault(_AproposSlider);
 
-var _Home = require('../components/pages/Home');
+var _Apropos = require('../components/pages/Apropos');
 
-var _Home2 = _interopRequireDefault(_Home);
+var _Apropos2 = _interopRequireDefault(_Apropos);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/lucasvogel/Sites/elocyclo/src/pages/index.js?entry';
+var _jsxFileName = '/Users/lucasvogel/Sites/elocyclo/src/pages/apropos.js?entry';
 
 
 var currentPage = {
-	title: 'Accueil',
-	slug: 'home',
-	path: '/'
+	title: 'À propos',
+	slug: 'apropos',
+	path: '/apropos'
 };
 
 exports.default = function () {
@@ -52,12 +52,12 @@ exports.default = function () {
 			fileName: _jsxFileName,
 			lineNumber: 17
 		}
-	}), _react2.default.createElement(_Slider2.default, {
+	}), _react2.default.createElement(_AproposSlider2.default, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 18
 		}
-	}), _react2.default.createElement(_Home2.default, {
+	}), _react2.default.createElement(_Apropos2.default, {
 		__source: {
 			fileName: _jsxFileName,
 			lineNumber: 19
