@@ -1,12 +1,25 @@
 {
-  "name": "src",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "elocyclo",
+  "version": "0.1.0",
+  "private": false,
+  "dependencies": {
+    "next": "^3.0.1-beta.21",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   },
-  "keywords": [],
-  "author": "Lucas Vogel <contact@vogelino.com> (http://vogelino.com/)",
-  "license": "ISC"
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-vogelint-react": "^1.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
 }

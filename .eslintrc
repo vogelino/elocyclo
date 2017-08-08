@@ -1,0 +1,7 @@
+{
+    "extends": "eslint-config-vogelint-react",
+    "rules": {
+        "jsx-a11y/anchor-has-content": "off",
+        "jsx-a11y/href-no-hash": "off",
+    }
+}
