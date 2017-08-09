@@ -46,7 +46,7 @@ class MenuDropdwon extends Component {
 				onMouseOver={() => this.setDropdownVisibility(true)}
 				onMouseOut={() => this.setDropdownVisibility(false)}
 			>
-				{dropdownText}
+				<span>{dropdownText}</span>
 				<section className="simple-button">
 					<small className="rotate">&#123;</small>
 				</section>
