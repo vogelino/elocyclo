@@ -368,6 +368,10 @@ p{
 	line-height: 14px;
 }
 
+#mobile-menu-button small {
+	top: 11px;
+}
+
 .search-button form {
 	position: absolute;
 	top: 0;
@@ -485,9 +489,19 @@ header#main-header nav{
 	height:auto;
 	float:left;
 	margin-top:3px;
+	-webkit-transition: opacity 200ms ease-out;
+	-o-transition: opacity 200ms ease-out;
+	transition: opacity 200ms ease-out;
 }
-header#main-header nav ul li{
-	display:inline;
+header#main-header nav.closed {
+	opacity: 0;
+	pointer-events: none;
+}
+header#main-header nav.opened {
+	opacity: 1;
+}
+header#main-header nav ul li {
+	float: left;
 }
 li:last-child .simple-button{
 	margin-right:0;
@@ -499,8 +513,8 @@ ul#lang-n-search{
 	margin-right:2.5%;
 	margin-top:3px;
 }
-ul#lang-n-search li{
-	display:inline;
+ul#lang-n-search li {
+	float: left;
 }
 #slider-container{
 	width:100%;
@@ -1181,8 +1195,8 @@ a#don-it{
 	}
 }
 @media (min-width:808px){
-	header#main-header nav{
-		display:block !important;
+	header#main-header nav.closed {
+		opacity: 1;
 	}
 	.actu .actu-content .actu-txt p, #map-caption p{
 		-moz-column-count: 2;
@@ -1197,8 +1211,7 @@ a#don-it{
 	#mobile-menu-button{
 		display:block;
 	}
-	header#main-header nav{
-		display:none;
+	header#main-header nav {
 		position:absolute;
 		top:102px;
 		width:100%;
