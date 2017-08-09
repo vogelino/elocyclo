@@ -2,21 +2,21 @@ import React from 'react';
 import HtmlHead from '../components/HtmlHead';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import AproposSlider from '../components/AproposSlider';
-import Apropos from '../components/pages/Apropos';
+import StationsSlider from '../components/StationsSlider';
+import Stations from '../components/pages/Stations';
 
 const currentPage = {
-	title: 'À propos',
-	slug: 'apropos',
-	path: '/apropos',
+	title: 'Les Stations',
+	slug: 'stations',
+	path: '/stations',
 };
 
 export default () => (
-	<div className="apropos-page">
+	<div className="stations-page">
 		<HtmlHead page={currentPage} />
 		<Header pageName={currentPage.slug} />
-		<AproposSlider />
-		<Apropos />
+		<StationsSlider />
+		<Stations />
 		<Footer pageName={currentPage.slug} />
 	</div>
 );
