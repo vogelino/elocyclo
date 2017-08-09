@@ -27,8 +27,8 @@ class MenuDropdwon extends Component {
 			dropdownOpened: false,
 		};
 	}
-	toggleSubmenuVisibility() {
-		this.setState({ dropdownOpened: !this.state.dropdownOpened });
+	setDropdownVisibility(dropdownOpened) {
+		this.setState({ dropdownOpened });
 	}
 	render() {
 		const { dropdownOpened } = this.state;
@@ -43,13 +43,13 @@ class MenuDropdwon extends Component {
 					${dropdownOpened ? 'opened' : 'closed'}
 				`}
 				id="menu-select"
+				onMouseOver={() => this.setDropdownVisibility(true)}
+				onMouseOut={() => this.setDropdownVisibility(false)}
 			>
-				<span onClick={() => this.toggleSubmenuVisibility()}>
-					{dropdownText}
-					<section className="simple-button">
-						<small className="rotate">&#123;</small>
-					</section>
-				</span>
+				{dropdownText}
+				<section className="simple-button">
+					<small className="rotate">&#123;</small>
+				</section>
 				<ul>
 					{links.map((link) => <MenuDropdwonLink key={link.url} {...link} />)}
 				</ul>
