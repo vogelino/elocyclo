@@ -1,15 +1,15 @@
 import React from 'react';
+import TabbedView from '../TabbedView';
 
-export default () => (
-	<div id="container">
-		<section className="noisy">
-			<section className="tabs">
-				<ul id="tab-nav">
-					<li className="active"><a href="#concept" className="simple-button gradient tab-button">Concept</a></li>
-					<li><a href="#fonctionnement" className="simple-button gradient tab-button ">Fonctionnement</a></li>
-				</ul>
-				<div className="tab-zone white-box" id="concept">
-					<section className="tab-content page-tab-content">
+export default () => {
+	const tabsProps = {
+		tabs: [
+			{
+				tabTitle: 'Concept',
+				tabId: 'concept',
+				tabIndex: 0,
+				tabContent: (
+					<div>
 						<h2>Le réseau Elocyclo</h2>
 						<p>
 							Une initiative de l&#39;association urbaine liée à
@@ -40,10 +40,15 @@ export default () => (
 							de nouveaux vélos, électriques ainsi que dans le
 							développement de nouvelles stations.
 						</p>
-					</section>
-				</div>
-				<div className="tab-zone white-box" id="fonctionnement">
-					<section className="tab-content page-tab-content">
+					</div>
+				),
+			},
+			{
+				tabTitle: 'Fonctionnement',
+				tabId: 'fonctionnement',
+				tabIndex: 1,
+				tabContent: (
+					<div>
 						<h2>Comment utiliser le service?</h2>
 						<p>
 							<strong>Retirer un vélo électrique</strong><br /><br />
@@ -97,12 +102,19 @@ export default () => (
 							vol est attesté, notre assurance prend en charge les frais de remplacement.
 							L&#39;association Elocyclo porte alors plainte pour vol.
 						</p>
-					</section>
-				</div>
+					</div>
+				),
+			},
+		],
+	};
+	return (
+		<div id="container">
+			<section className="noisy">
+				<TabbedView {...tabsProps} />
+				<a href="/inscription" title="Inscription <?php echo $siteName; ?>" id="want-it" className="about-want gradient">
+					S&#39;inscrire
+				</a>
 			</section>
-			<a href="/inscription" title="Inscription <?php echo $siteName; ?>" id="want-it" className="about-want gradient">
-				S&#39;inscrire
-			</a>
-		</section>
-	</div>
-);
+		</div>
+	);
+};
