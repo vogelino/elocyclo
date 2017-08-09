@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MenuDropdown from './MenuDropdown';
+import SearchField from './SearchField';
 
 const Header = ({ pageName }) => {
 	const elocycloDropdown = {
@@ -75,19 +76,7 @@ const Header = ({ pageName }) => {
 						</div>
 					</li>
 					<li>
-						<div
-							className="simple-button gradient"
-							id="search-button"
-						>
-							<small>
-								<b>&ocirc;</b>
-								<b>X</b>
-							</small>
-							<form>
-								<input type="text" value="Search something" />
-								<input type="submit" value="&ocirc;" />
-							</form>
-						</div>
+						<SearchField />
 					</li>
 				</ul>
 			</header>
