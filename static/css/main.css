@@ -129,13 +129,6 @@ small{
 	left:8px;
 	font-size:28px;
 }
-small.rotate{
-	-moz-transform: rotate(90deg);
-	-webkit-transform: rotate(90deg);
-	-o-transform: rotate(90deg);
-	-ms-transform: rotate(90deg);
-	transform: rotate(90deg);
-}
 i{font-style:normal;}
 p{
 	letter-spacing:normal;
@@ -197,29 +190,36 @@ p{
 		/*——————  http://www.colorzilla.com/gradient-editor/#f6f6f6+0,dcdcdc+100;Custom  —————————*/
 
 }
-.simple-button:hover, .lang-switch-button:hover, #menu-select.select-button.active:hover{
+.simple-button:hover,
+.lang-switch-button:hover,
+#menu-select.select-button.active:hover{
 	-webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
 	color:#555;
 	cursor:pointer;
-
-		background: #f9f9f9;
-
+	background: #f9f9f9;
 }
-.simple-button:active, .simple-button.active, .lang-switch-button:active, .lang-switch-button.active, .light-bg-btn, select:focus{
-	background:#dc3332;
-	border:none;
-	color:#fff;
+.simple-button:active,
+.simple-button.active,
+.lang-switch-button:active,
+.lang-switch-button.active,
+.light-bg-btn, select:focus {
+	background: #dc3332;
+	border: none;
+	color: #fff;
 	text-shadow: 0px 1px 0px #222222;
 	filter: dropshadow(color=#222222, offx=0, offy=1);
-	margin:1px 31px 1px 1px;
+	margin: 1px 31px 1px 1px;
 	-webkit-box-shadow: inset 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
 	box-shadow: inset 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
 }
-.simple-button.active:hover, .lang-switch-button.active:hover{
+.simple-button.active:hover,
+.lang-switch-button.active:hover{
 	cursor:default;
 }
-#menu-select.select-button.active:hover, #menu-select.select-button.active:hover .simple-button, .light-bg-btn:hover{
+#menu-select.select-button.active:hover,
+#menu-select.select-button.active:hover .simple-button,
+.light-bg-btn:hover{
 	cursor:pointer;
 	border:1px solid #BFBFBF;
 	margin:0px 30px 0px 0px;
@@ -236,10 +236,6 @@ p{
 .select-button{
 	padding-right:55px;
 }
-.select-button small.rotate{
-	top:4px;
-	left:10px;
-}
 .select-button section{
 	width:12px;
 	height:12px;
@@ -247,7 +243,7 @@ p{
 	top:0;
 	right:0;
 	margin-right:0 !important;
-	padding:10px 10px;
+	padding:13px 17px 7px 5px;
 }
 .select-button section .select-arrow{
 	width:10px;
@@ -267,8 +263,42 @@ p{
 	position:absolute;
 	top:34px;
 	left:0;
-	display:none;
 	float:left;
+	-webkit-transition: opacity 200ms ease-out;
+	-o-transition: opacity 200ms ease-out;
+	transition: opacity 200ms ease-out;
+}
+.select-button.closed ul {
+	opacity: 0;
+	pointer-events: none;
+}
+.select-button .rotate {
+	width: 10px;
+	height: 10px;
+	position: relative;
+	float: left;
+	line-height: 10px;
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transition: transform 200ms ease-out;
+	-o-transition: transform 200ms ease-out;
+	transition: transform 200ms ease-out;
+	-webkit-transform-origin: 4.5px 4px;
+	-moz-transform-origin: 4.5px 4px;
+	-ms-transform-origin: 4.5px 4px;
+	-o-transform-origin: 4.5px 4px;
+	transform-origin: 4.5px 4px;
+}
+.select-button.opened .rotate {
+	-webkit-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+.select-button.opened ul {
+	opacity: 1;
 }
 .select-button ul li a{
 	width:auto;
