@@ -2,21 +2,21 @@ import React from 'react';
 import HtmlHead from '../components/HtmlHead';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import InscriptionSlider from '../components/InscriptionSlider';
-import Inscription from '../components/pages/Inscription';
+import ActualitesSlider from '../components/ActualitesSlider';
+import Actualites from '../components/pages/Actualites';
 
 const currentPage = {
-	title: 'Inscription',
-	slug: 'inscription',
-	path: '/inscription',
+	title: 'Actualités',
+	slug: 'actualites',
+	path: '/actualites',
 };
 
 export default () => (
-	<div className="inscription-page">
+	<div className="actualites-page">
 		<HtmlHead page={currentPage} />
 		<Header pageName={currentPage.slug} />
-		<InscriptionSlider />
-		<Inscription />
+		<ActualitesSlider />
+		<Actualites />
 		<Footer pageName={currentPage.slug} />
 	</div>
 );
