@@ -8,6 +8,7 @@ export default () => {
 				tabTitle: 'Concept',
 				tabId: 'concept',
 				tabIndex: 0,
+				style: { backgroundImage: 'url(/static/img/a-propos/principal.gif)' },
 				tabContent: (
 					<div>
 						<h2>Le réseau Elocyclo</h2>
@@ -50,7 +51,7 @@ export default () => {
 				tabContent: (
 					<div>
 						<h2>Comment utiliser le service?</h2>
-						<p>
+						<p style={{ backgroundImage: 'url(/static/img/a-propos/retirer.gif)' }}>
 							<strong>Retirer un vélo électrique</strong><br /><br />
 							Vous pouvez utiliser un vélo électrique Elocyclo pendant 24h.
 							Pour utiliser un vélo électrique, identifiez-vous sur
@@ -70,7 +71,10 @@ export default () => {
 							peut également vous informer sur le statut de charge des vélos de cette
 							station: choisissez le menu « charges ».
 						</p>
-						<p className="separated-tab-p">
+						<p
+							className="separated-tab-p"
+							style={{ backgroundImage: 'url(/static/img/a-propos/restituer.gif)' }}
+						>
 							<strong>Restituer son vélo électrique</strong><br /><br />
 							Une fois votre trajet terminé, accrochez le vélo électrique
 							sur un point d&#39;attache libre dans n&#39;importe
@@ -86,7 +90,10 @@ export default () => {
 							que leur disponibilité actuelle : choisissez le
 							menu «stations».
 						</p>
-						<p className="separated-tab-p">
+						<p
+							className="separated-tab-p"
+							style={{ backgroundImage: 'url(/static/img/a-propos/casse.gif)' }}
+						>
 							<strong>Retard de restitution, non-restitution, casse et vol</strong><br /><br />
 							Si vous rendez votre Elocyclo en retard (après 24h d&#39;usage),
 							nous vous adresserons par courrier une surtaxe de CHFr. 5.-

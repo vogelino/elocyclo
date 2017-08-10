@@ -21,7 +21,7 @@ export default class extends Component {
 		return (
 			<div id="slider-container">
 				<section id="slider">
-					<ul className="row">
+					<ul className="row multi-slides">
 						<li className={activeSlide === 0 ? 'active' : ''}>
 							<section className="slide-img" />
 							<blockquote>

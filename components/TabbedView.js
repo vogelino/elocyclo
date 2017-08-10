@@ -42,17 +42,26 @@ TabsNav.propTypes = {
 	onTabClick: TabsNavItem.propTypes.onTabClick,
 };
 
-const Tab = ({ tabContent, tabId }) => (
-	<div className="tab-zone white-box" id={tabId}>
+const Tab = ({ tabContent, tabId, style }) => (
+	<div
+		className="tab-zone white-box"
+		id={tabId}
+		style={style}
+	>
 		<section className="tab-content">
 			{tabContent}
 		</section>
 	</div>
 );
 
+Tab.defaultProps = {
+	style: {},
+};
+
 Tab.propTypes = {
 	tabContent: PropTypes.element.isRequired,
 	tabId: PropTypes.string.isRequired,
+	style: PropTypes.object,
 };
 
 class TabbedView extends Component {
@@ -93,6 +102,7 @@ TabbedView.propTypes = {
 		tabTitle: TabsNavItem.propTypes.tabTitle,
 		tabIndex: TabsNavItem.propTypes.tabIndex,
 		tabContent: Tab.propTypes.tabContent,
+		style: PropTypes.object,
 	})).isRequired,
 	className: PropTypes.string,
 	id: PropTypes.string,

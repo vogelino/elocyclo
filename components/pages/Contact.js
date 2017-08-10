@@ -3,7 +3,12 @@ import React from 'react';
 export default () => (
 	<div id="container">
 		<section className="noisy">
-			<form method="post" className="white-box" id="subscribe-form">
+			<form
+				method="post"
+				className="white-box"
+				id="subscribe-form"
+				style={{ backgroundImage: 'url(/static/img/slider/takeit.png)' }}
+			>
 				<div className="fifif">
 					<h3>Nous contacter</h3>
 					<label>
