@@ -2,6 +2,9 @@
   "name": "elocyclo",
   "version": "0.1.0",
   "private": false,
+  "engines": {
+    "node": "12.14.1"
+  },
   "dependencies": {
     "next": "^3.0.1-beta.21",
     "prop-types": "^15.5.10",
