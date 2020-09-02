@@ -6,7 +6,7 @@
     "node": "12.18.3"
   },
   "dependencies": {
-    "next": "^3.0.1-beta.21",
+    "next": "^9.3.2",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
